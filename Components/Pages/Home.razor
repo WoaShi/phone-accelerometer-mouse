@@ -1,0 +1,46 @@
+﻿@page "/"
+
+<h2>请输入你的ip地址</h2>
+<textarea placeholder="在此处输入你的ip地址">
+    @textIp
+</textarea>
+
+
+Welcome to your new app.
+
+
+@code {
+    using Microsoft.Maui.Controls;
+using Microsoft.Maui.Devices.Sensors;
+using System.Net.Sockets;
+using System.Text;
+
+namespace AndroidSensorSender;
+
+    public partial class MainPage : ContentPage
+    {
+    UdpClient udpClient;
+    string? textIp;
+    string pcIp = textIp; // 替换为你PC的局域网IP
+    int port = 5000;
+
+    public MainPage()
+    {
+        InitializeComponent();
+
+        udpClient = new UdpClient();
+
+        Accelerometer.ReadingChanged += Accelerometer_ReadingChanged;
+        Accelerometer.Start(SensorSpeed.Game);
+    }
+
+    private void Accelerometer_ReadingChanged(object sender, AccelerometerChangedEventArgs e)
+    {
+        var data = $"{e.Reading.Acceleration.X},{e.Reading.Acceleration.Y}";
+        var bytes = Encoding.UTF8.GetBytes(data);
+        udpClient.SendAsync(bytes, bytes.Length, pcIp, port);
+    }
+    }
+
+
+}
