@@ -2,8 +2,11 @@
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <IsFirstTimeProjectOpen>False</IsFirstTimeProjectOpen>
-    <ActiveDebugFramework>net8.0-windows10.0.19041.0</ActiveDebugFramework>
-    <ActiveDebugProfile>Windows Machine</ActiveDebugProfile>
+    <ActiveDebugFramework>net8.0-android</ActiveDebugFramework>
+    <ActiveDebugProfile>Pixel 6 - API 25 (Android 7.1 - API 25)</ActiveDebugProfile>
+    <SelectedPlatformGroup>Emulator</SelectedPlatformGroup>
+    <DefaultDevice>pixel_6_-_api_25</DefaultDevice>
+    <SelectedDevice>vivo V1981A</SelectedDevice>
   </PropertyGroup>
   <ItemGroup>
     <None Update="App.xaml">

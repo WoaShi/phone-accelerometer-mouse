@@ -1,46 +1,89 @@
 ﻿@page "/"
+@using System.Net.Sockets
+@using System.Text
+@using Microsoft.Maui.Devices.Sensors
+@using Microsoft.AspNetCore.Components.Forms
 
 <h2>请输入你的ip地址</h2>
-<textarea placeholder="在此处输入你的ip地址">
-    @textIp
-</textarea>
+<InputTextArea @bind-Value="textIp" placeholder="在此处输入你的ip地址" />
 
-
-Welcome to your new app.
+<h3>当前加速度</h3>
+<div style="text-align: right;">
+    <p>X轴：@accelX.ToString("F3").PadLeft(6)</p>
+    <p>Y轴：@accelY.ToString("F3").PadLeft(6)</p>
+    <p>Z轴：@accelZ.ToString("F3").PadLeft(6)</p>
+</div>
 
 
 @code {
-    using Microsoft.Maui.Controls;
-using Microsoft.Maui.Devices.Sensors;
-using System.Net.Sockets;
-using System.Text;
+    private UdpClient udpClient = new();
+    private string? textIp;
+    private int port = 5000;
 
-namespace AndroidSensorSender;
+    private double accelX;
+    private double accelY;
+    private double accelZ;
 
-    public partial class MainPage : ContentPage
+    protected override void OnInitialized()
     {
-    UdpClient udpClient;
-    string? textIp;
-    string pcIp = textIp; // 替换为你PC的局域网IP
-    int port = 5000;
-
-    public MainPage()
-    {
-        InitializeComponent();
-
-        udpClient = new UdpClient();
-
         Accelerometer.ReadingChanged += Accelerometer_ReadingChanged;
         Accelerometer.Start(SensorSpeed.Game);
     }
 
+    // 存储重力分量（初始为0）
+    private double gravityX = 0;
+    private double gravityY = 0;
+    private double gravityZ = 0;
+
+    // 存储线性加速度
+    private double linearX = 0;
+    private double linearY = 0;
+    private double linearZ = 0;
+
+    // 低通滤波因子（0.8～0.98，一般设为 0.9）
+    private const double alpha = 0.9;
+
     private void Accelerometer_ReadingChanged(object sender, AccelerometerChangedEventArgs e)
     {
-        var data = $"{e.Reading.Acceleration.X},{e.Reading.Acceleration.Y}";
-        var bytes = Encoding.UTF8.GetBytes(data);
-        udpClient.SendAsync(bytes, bytes.Length, pcIp, port);
-    }
-    }
+        _ = InvokeAsync(async () =>
+        {
+            // 原始加速度
+            var ax = e.Reading.Acceleration.X;
+            var ay = e.Reading.Acceleration.Y;
+            var az = e.Reading.Acceleration.Z;
 
+            // 低通滤波提取重力
+            gravityX = alpha * gravityX + (1 - alpha) * ax;
+            gravityY = alpha * gravityY + (1 - alpha) * ay;
+            gravityZ = alpha * gravityZ + (1 - alpha) * az;
+
+            // 原始值 - 重力 = 线性加速度
+            linearX = ax - gravityX;
+            linearY = ay - gravityY;
+            linearZ = az - gravityZ;
+
+            // 显示或发送线性加速度
+            accelX = linearX;
+            accelY = linearY;
+            accelZ = linearZ;
+
+            if (!string.IsNullOrWhiteSpace(textIp))
+            {
+                var data = $"{accelX:F3},{accelY:F3},{accelZ:F3}";
+                var bytes = Encoding.UTF8.GetBytes(data);
+
+                try
+                {
+                    await udpClient.SendAsync(bytes, bytes.Length, textIp, port);
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"发送失败: {ex.Message}");
+                }
+            }
+
+            StateHasChanged();
+        });
+    }
 
 }

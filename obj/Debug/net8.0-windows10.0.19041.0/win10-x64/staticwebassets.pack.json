@@ -1,27 +1,27 @@
 {
   "Files": [
     {
-      "Id": "D:\\Builds\\C#\\AndroidMouse\\obj\\Debug\\net8.0-windows10.0.19041.0\\win10-x64\\scopedcss\\bundle\\AndroidMouse.styles.css",
+      "Id": "D:\\Files\\.Net\\AndroidMouseMAUI\\phone-accelerometer-mouse\\obj\\Debug\\net8.0-windows10.0.19041.0\\win10-x64\\scopedcss\\bundle\\AndroidMouse.styles.css",
       "PackagePath": "staticwebassets\\AndroidMouse.styles.css"
     },
     {
-      "Id": "D:\\Builds\\C#\\AndroidMouse\\wwwroot\\css\\app.css",
+      "Id": "D:\\Files\\.Net\\AndroidMouseMAUI\\phone-accelerometer-mouse\\wwwroot\\css\\app.css",
       "PackagePath": "staticwebassets\\css\\app.css"
     },
     {
-      "Id": "D:\\Builds\\C#\\AndroidMouse\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+      "Id": "D:\\Files\\.Net\\AndroidMouseMAUI\\phone-accelerometer-mouse\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css"
     },
     {
-      "Id": "D:\\Builds\\C#\\AndroidMouse\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
+      "Id": "D:\\Files\\.Net\\AndroidMouseMAUI\\phone-accelerometer-mouse\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
       "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css.map"
     },
     {
-      "Id": "D:\\Builds\\C#\\AndroidMouse\\wwwroot\\favicon.png",
+      "Id": "D:\\Files\\.Net\\AndroidMouseMAUI\\phone-accelerometer-mouse\\wwwroot\\favicon.png",
       "PackagePath": "staticwebassets\\favicon.png"
     },
     {
-      "Id": "D:\\Builds\\C#\\AndroidMouse\\wwwroot\\index.html",
+      "Id": "D:\\Files\\.Net\\AndroidMouseMAUI\\phone-accelerometer-mouse\\wwwroot\\index.html",
       "PackagePath": "staticwebassets\\index.html"
     },
     {

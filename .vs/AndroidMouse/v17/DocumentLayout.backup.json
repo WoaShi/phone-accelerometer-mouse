@@ -1,10 +1,18 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Builds\\C#\\AndroidMouse\\",
+  "WorkspaceRootPath": "D:\\Files\\.Net\\AndroidMouseMAUI\\phone-accelerometer-mouse\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7A567508-4E7B-40B7-B94E-B6CCEB46C290}|AndroidMouse.csproj|d:\\builds\\c#\\androidmouse\\components\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{7A567508-4E7B-40B7-B94E-B6CCEB46C290}|AndroidMouse.csproj|d:\\files\\.net\\androidmousemaui\\phone-accelerometer-mouse\\components\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{7A567508-4E7B-40B7-B94E-B6CCEB46C290}|AndroidMouse.csproj|solutionrelative:components\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7A567508-4E7B-40B7-B94E-B6CCEB46C290}|AndroidMouse.csproj|d:\\files\\.net\\androidmousemaui\\phone-accelerometer-mouse\\components\\pages\\counter.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7A567508-4E7B-40B7-B94E-B6CCEB46C290}|AndroidMouse.csproj|solutionrelative:components\\pages\\counter.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7A567508-4E7B-40B7-B94E-B6CCEB46C290}|AndroidMouse.csproj|d:\\files\\.net\\androidmousemaui\\phone-accelerometer-mouse\\components\\_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7A567508-4E7B-40B7-B94E-B6CCEB46C290}|AndroidMouse.csproj|solutionrelative:components\\_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,17 +22,51 @@
       "DocumentGroups": [
         {
           "DockedWidth": 309,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 4,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{ca8cc5c7-0231-406a-95cd-aa5ed6ac0190}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Counter.razor",
+              "DocumentMoniker": "D:\\Files\\.Net\\AndroidMouseMAUI\\phone-accelerometer-mouse\\Components\\Pages\\Counter.razor",
+              "RelativeDocumentMoniker": "Components\\Pages\\Counter.razor",
+              "ToolTip": "D:\\Files\\.Net\\AndroidMouseMAUI\\phone-accelerometer-mouse\\Components\\Pages\\Counter.razor",
+              "RelativeToolTip": "Components\\Pages\\Counter.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-21T12:15:59.896Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "_Imports.razor",
+              "DocumentMoniker": "D:\\Files\\.Net\\AndroidMouseMAUI\\phone-accelerometer-mouse\\Components\\_Imports.razor",
+              "RelativeDocumentMoniker": "Components\\_Imports.razor",
+              "ToolTip": "D:\\Files\\.Net\\AndroidMouseMAUI\\phone-accelerometer-mouse\\Components\\_Imports.razor",
+              "RelativeToolTip": "Components\\_Imports.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-21T12:14:17.646Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Home.razor",
-              "DocumentMoniker": "D:\\Builds\\C#\\AndroidMouse\\Components\\Pages\\Home.razor",
+              "DocumentMoniker": "D:\\Files\\.Net\\AndroidMouseMAUI\\phone-accelerometer-mouse\\Components\\Pages\\Home.razor",
               "RelativeDocumentMoniker": "Components\\Pages\\Home.razor",
-              "ToolTip": "D:\\Builds\\C#\\AndroidMouse\\Components\\Pages\\Home.razor",
+              "ToolTip": "D:\\Files\\.Net\\AndroidMouseMAUI\\phone-accelerometer-mouse\\Components\\Pages\\Home.razor",
               "RelativeToolTip": "Components\\Pages\\Home.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-05-21T02:53:09.103Z",
               "EditorCaption": ""
